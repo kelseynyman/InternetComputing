@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        /* set the width and position for image */
+        img {
+            width: 150px;
+            position: absolute;
+            top:50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" id="target">
+        <img src="bumblebee.jpg" alt="" id="image">
+    </div>
+
+    <script>
+
+        // storing the path of images as array 
+        var images = ["bumblebee.jpg", "honey.png", "bee.png", "oh.png", ];
+        
+        // to access the components 
+        var wrapper = document.getElementById('target');
+        var image = document.getElementById('image');
+
+        // adding a mouseenter event 
+        wrapper.onmouseenter = function () {
+            // the function call when mouse enter event occurs
+            mouseEnter(); 
+        };
+
+
+        // functions definition for mouseEnter
+        function mouseEnter() {
+
+            // assigning a random number for the variable
+            randomIndex = getRandom();
+            randomNumber = getRandom();
+
+            // setting a random path of the image
+            var randomImage = images[randomIndex];
+
+            // setting the source of the image as the rando path
+            image.src= randomImage ;
+
+            // setting the style of the image as random values
+            image.style.top= randomNumber*10+"px";
+            image.style.left= randomNumber*20+ "px";
+
+        }
+
+        // function to return a random value
+        function getRandom() {
+            return Math.floor(Math.random() * (4));
+        }
+    </script>
+</body>
+
+</html>

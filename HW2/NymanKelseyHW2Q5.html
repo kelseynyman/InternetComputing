@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!-- HW#2: Q5 -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Q5</title>
+        <style>
+            .balls
+            {
+                border-radius: 50%;
+                position: fixed;
+                width: 50px;
+                height: 50px;
+                margin-top: 50px;
+                animation-iteration-count: infinite;
+            }
+            #ball1
+            {
+                left: 0%;
+                background: red;
+                animation-name: redball;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+            }
+            #ball2
+            {
+                left: 100%;
+                background: green;
+                animation-name: greenball;
+                animation-duration: 8s;
+                animation-iteration-count: infinite;
+                z-index: -1;
+            }
+            @keyframes redball 
+            {
+                0%
+                {
+                    top: 0%;
+                    left: 0%;
+                }
+                100%
+                {
+                    top: 90%;
+                    left: 90%;
+                }
+            }
+            @keyframes greenball 
+            {
+                0%
+                {
+                    top: 0%;
+                    left: 90%;
+                }
+                100%
+                {
+                    top: 90%;
+                    left: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="balls" id="ball1"></div>
+        <div class="balls" id="ball2"></div>
+    </body>
+</html>

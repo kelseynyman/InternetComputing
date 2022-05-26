@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Compound Interest</title>
+  </head>
+  <body>
+    <center>
+      <span>Calculating Compound Interest</span>
+      <br />
+      <table border="1" width="380px" cellspacing="0" cellpadding="5">
+        <thead>
+          <tr style="background-color: blue; color: white">
+            <td><b>Year</b></td>
+            <td><b>Amount on deposit</b></td>
+          </tr>
+        </thead>
+
+        <tbody></tbody>
+      </table>
+    </center>
+    <script>
+      pamt = parseInt(prompt("Please enter the principal amount"));
+      irate = parseInt(prompt("Please enter the percentage of interest rate"));
+
+      let tb = "";
+      for (i = 1; i <= 10; i++) {
+        pamt = pamt + pamt * (irate / 100);
+        if (i == 1 || i == 4 || i == 7 || i == 10)
+          tb +='<tr bgColor="yellow"><td>' +i +"</td><td>" +pamt.toFixed(2) +"</td></tr>";
+        else if (i == 2 || i == 5 || i == 8)
+          tb +=
+            '<tr bgColor="lightblue"><td>' +i +"</td><td>" +pamt.toFixed(2) +"</td></tr>";
+        else
+          tb += "<tr><td>" + i + "</td><td>" + pamt.toFixed(2) + "</td></tr>";
+      }
+      document.getElementsByTagName("tbody")[0].innerHTML = tb;
+    </script>
+  </body>
+</html>

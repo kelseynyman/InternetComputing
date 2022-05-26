@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<!-- Kelsey Nyman -->
+<!-- Midterm Project -->
+<!-- Reservation -->
+
+<html>
+    <head>
+        <title>Reservation</title>
+        <style>
+            a 
+            {
+                padding-right: 10px;
+                font-size: 18px;
+                color: blue;
+            }
+
+            a:active 
+            {
+                color: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Atlantic Trails Resort (This Page Needs Modifications)</h1>
+
+        <div>
+            <b>
+                <a href="NymanKelseyMidtermProject.html">Home</a>
+                <a href="NymanKelseyMidtermProj1.html">Yurts</a>
+                <a href="NymanKelseyMidtermProj3.html">Activities</a>
+                <a href="NymanKelseyMidtermProj2.html">Reservations</a>
+            </b>
+        </div>
+
+        <h2>Reservations at Atlantic Trails (Need Modifications)</h2>
+
+        <h3>Contact Us Today!</h3>
+
+        <h2>Reservations Form</h2>
+
+        <form action="NymanKelseyMidtermProj5.php" method="post">
+            <table>
+                <!-- Last Name -->
+                <tr>
+                    <td><label for="Last-name">Last Name:</label></td>
+                    <td><input type="text" id="Last-name" name="Last-name" required></td>
+                </tr>
+
+                <!-- First Name -->
+                <tr>
+                    <td><label for="First-name">First Name:</label></td>
+                    <td><input type="text" name="First-name" required></td>
+                </tr>
+
+                <!-- Address -->
+                <tr rowspan="2">
+                    <td><b>Address</b></td>
+                </tr>
+
+                <!-- address1 -->
+                <tr>
+                    <td><label>Address1:</label></td>
+                    <td><input type="text" name="address1" required></td>
+                </tr>
+
+                <!-- address2 -->
+                <tr>
+                    <td><label>Address2:</label></td>
+                    <td><input type="text" name="address2"></td>
+                </tr>
+
+                <!-- city -->
+                <tr>
+                    <td><label>City:</label></td>
+                    <td><input type="text" name="city" required></td>
+                </tr>
+
+                <!-- state -->
+                <tr>
+                    <td><label>State:</label></td>
+                    <td><input type="text" name="state" required></td>
+                </tr>
+
+                <!-- zip -->
+                <tr>
+                    <td><label>Zip Code:</label></td>
+                    <td><input type="number" name="zip" required></td>
+                </tr>
+
+                <!-- Check-in -->
+                <tr>
+                    <td><label>Check-in Date:</label></td>
+                    <td><input type="date" name="checkin" required></td>
+                </tr>
+
+                <!-- Check out -->
+                <tr>
+                    <td><label>Check-out Date:</label></td>
+                    <td><input type="date" name="checkout" required></td>
+                </tr>
+
+                <!-- Type of room -->
+                <tr>
+                    <td><label>Room Type:</label></td>
+                    <td>
+                        <select name="roomtype" required>
+                            <option value="Placeholder">Please Select</option>
+                            <option value="King">King</option>
+                            <option value="Queen">Queen</option>
+                            <option value="Suit">Suit</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Phone Number -->
+                <tr>
+                    <td><label>Phone:</label></td>
+                    <td><input type="tel" name="phone" placeholder="(###)###-####" required>
+                        <span class="ExampleNumber">(###)###-####</span>
+                    </td>
+                </tr>
+                    
+                <!-- E-mail -->
+                <tr>
+                    <td><label>E-mail Address:</label></td>
+                    <td><input type="email" name="email" placeholder="someone@abc.com" required></td>
+                </tr>
+
+                <!-- num of people -->
+                <tr>
+                    <td><label>Number of People:</label></td>
+                    <td><input type="number" name="people" required></td>
+                </tr>
+
+                <!-- Payment -->
+                <tr>
+                    <td><label>Payment Method:</label></td>
+                    <td>
+                        <select name="payment" required>
+                            <option value="Placeholder">Please Select</option>
+                            <option value="MC">MC</option>
+                            <option value="VISA">VISA</option>
+                            <option value="AMEX">AMEX</option>
+                            <option value="Discover">Discover</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Card Num -->
+                <tr>
+                    <td><label>Card Number:</label></td>
+                    <td><input type="number" minlength="16" name="cardnum" required></td>
+                </tr>
+                
+                <tr>
+                    <td><button type="submit">Submit</button> <button type="clear">Clear</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

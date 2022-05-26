@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Square and Cube</title>
+    </head>
+
+    <body>
+        <script language="javascript">
+            var no1, no2;
+
+            no1 = parseInt(prompt("Enter a number between 1 and 20: "));
+            no2 = parseInt(prompt("Enter a number between 1 and 20: "));
+
+            if(!(no1>=1 && no2<=10) || !(no1>=1 && no2<=10))
+            {
+                alert("The number has to be between 1 and 20!!");
+            }
+            else
+            {
+                document.write("<table border=1 style=width:100%>");
+                document.write("<tr><th>number</th><th>square</th><th>cube</th></tr>");
+                for(var i=no1;i<=no2;i++)
+                {
+                    document.write("<tr><th>"+i+"</th><th>"+i*i+"</th><th>"+i*i*i+"</th></tr>");
+                }
+                document.write("</table>");
+            }
+        </script>
+    </body>
+</html>

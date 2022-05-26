@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Lists</title>
+    </head>
+
+    <body>
+        <script language="javascript">
+            // ask for number
+            numberOfListStyleTypeInp = Number(
+            prompt(`Select a list style: \n1 (numbered)\n2 (lettered)\n3 (roman numbered)\n4 (disc)\n5 (circle)\n6 (square)\n`)
+            );
+
+            // list style html
+            let listStyleHtmlStr = "";
+
+            // if picked style is 1
+            if (numberOfListStyleTypeInp === 1) {
+            // show heading with ordered list
+            listStyleHtmlStr += "<h1>Numbered List</h1><ol>";
+
+            // append string list items using for loop
+            for (let todoLiCounter = 1; todoLiCounter <= 10; todoLiCounter++) {
+                listStyleHtmlStr += `<li>To do item ${todoLiCounter}</li>`;
+            }
+
+            // show list
+            document.body.innerHTML = listStyleHtmlStr;
+            }
+
+            // if picked style is 2
+            if (numberOfListStyleTypeInp === 2) {
+            // show heading with A type ordered list
+            listStyleHtmlStr += "<h1>Lettered List</h1><ol type='A'>";
+
+            // append string list items using for loop
+            for (let todoLiCounter = 1; todoLiCounter <= 10; todoLiCounter++) {
+                listStyleHtmlStr += `<li>To do item ${todoLiCounter}</li>`;
+            }
+
+            // show list
+            document.body.innerHTML = listStyleHtmlStr;
+            }
+
+            // if picked style is 3
+            if (numberOfListStyleTypeInp === 3) {
+            // show heading
+            listStyleHtmlStr += "<h1>Roman Numbered List</h1><ol type='I'>";
+
+            // append string list items using for loop
+            for (let todoLiCounter = 1; todoLiCounter <= 10; todoLiCounter++) {
+                listStyleHtmlStr += `<li>To do item ${todoLiCounter}</li>`;
+            }
+
+            // show list
+            document.body.innerHTML = listStyleHtmlStr;
+            }
+
+            // if picked style is 4
+            if (numberOfListStyleTypeInp === 4) {
+            // show heading with ul list
+            listStyleHtmlStr += "<h1>Bullet List</h1><ul>";
+
+            // append string list items using for loop
+            for (let todoLiCounter = 1; todoLiCounter <= 10; todoLiCounter++) {
+                listStyleHtmlStr += `<li>To do item ${todoLiCounter}</li>`;
+            }
+
+            // show list
+            document.body.innerHTML = listStyleHtmlStr;
+            }
+
+            // if picked style is 5
+            if (numberOfListStyleTypeInp === 5) {
+            // show heading with ul list of circle type
+            listStyleHtmlStr += "<h1>Circle List</h1><ul style='list-style-type:circle'>";
+
+            // append string list items using for loop
+            for (let todoLiCounter = 1; todoLiCounter <= 10; todoLiCounter++) {
+                listStyleHtmlStr += `<li>To do item ${todoLiCounter}</li>`;
+            }
+
+            // show list
+            document.body.innerHTML = listStyleHtmlStr;
+            }
+
+            // if picked style is 6
+            if (numberOfListStyleTypeInp === 6) {
+            // show heading
+            listStyleHtmlStr += "<h1>Square List</h1><ul style='list-style-type:square'>";
+
+            // append string list items using for loop
+            for (let todoLiCounter = 1; todoLiCounter <= 10; todoLiCounter++) {
+                listStyleHtmlStr += `<li>To do item ${todoLiCounter}</li>`;
+            }
+
+            // show list
+            document.body.innerHTML = listStyleHtmlStr;
+            }
+        </script>
+    </body>
+</html>
